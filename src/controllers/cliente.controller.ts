@@ -80,7 +80,7 @@ export class ClienteController {
     let destino = cliente.email;
     let asunto = "Resgistro en la plataforma";
     let contenido = `Bienvenido ${cliente.nombre_cliente}, su nombre de ususario es: ${cliente.email} y su contraseña es: ${clave}`;
-    fetch("${Llaves.urlServivioNotificaciones}/envio-correos?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}")
+    fetch("${Llaves.urlServicioNotificaciones}/envio-correos?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}")
       .then((data: any)=> {
         console.log(data);
 
